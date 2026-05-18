@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Colors — Surfaces & Ink</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 20px; background: var(--paper); font-family: var(--font-body); color: var(--fg); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .group { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; }
+  .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--fg-muted); margin-bottom: 10px; }
+  .row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .chip { width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--border); flex: 0 0 28px; }
+  .chip-name { font-size: 13px; font-weight: 600; }
+  .chip-hex { font-family: var(--font-mono); font-size: 11px; color: var(--fg-muted); margin-left: auto; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="group">
+      <div class="label">Surfaces</div>
+      <div class="row"><div class="chip" style="background: var(--paper)"></div><div class="chip-name">paper</div><div class="chip-hex">#FFFFFF</div></div>
+      <div class="row"><div class="chip" style="background: var(--cream)"></div><div class="chip-name">cream</div><div class="chip-hex">#FAEEDA</div></div>
+      <div class="row"><div class="chip" style="background: var(--cream-deep)"></div><div class="chip-name">cream-deep</div><div class="chip-hex">#F1DFBF</div></div>
+      <div class="row"><div class="chip" style="background: var(--char)"></div><div class="chip-name">char</div><div class="chip-hex">#1A0E08</div></div>
+    </div>
+    <div class="group">
+      <div class="label">Ink</div>
+      <div class="row"><div class="chip" style="background: var(--espresso-ink)"></div><div class="chip-name">fg (hover)</div><div class="chip-hex">#2E0F06</div></div>
+      <div class="row"><div class="chip" style="background: var(--espresso)"></div><div class="chip-name">fg</div><div class="chip-hex">#4A1B0C</div></div>
+      <div class="row"><div class="chip" style="background: var(--fg-muted)"></div><div class="chip-name">fg-muted</div><div class="chip-hex">mix 64%</div></div>
+      <div class="row"><div class="chip" style="background: var(--fg-faint)"></div><div class="chip-name">fg-faint</div><div class="chip-hex">mix 38%</div></div>
+    </div>
+    <div class="group">
+      <div class="label">Borders</div>
+      <div class="row"><div class="chip" style="background: var(--border)"></div><div class="chip-name">border</div><div class="chip-hex">esp 12%</div></div>
+      <div class="row"><div class="chip" style="background: var(--border-strong)"></div><div class="chip-name">strong</div><div class="chip-hex">esp 28%</div></div>
+      <div class="row"><div class="chip" style="background: var(--border-focus)"></div><div class="chip-name">focus</div><div class="chip-hex">red</div></div>
+    </div>
+  </div>
+</body>
+</html>

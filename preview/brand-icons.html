@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Iconography — Lucide</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  body { margin: 0; padding: 22px; background: var(--paper); font-family: var(--font-body); color: var(--fg); }
+  .label { font-family: var(--font-mono); font-size: 11px; color: var(--fg-muted); margin-bottom: 10px; }
+  .row { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 70px; }
+  .item .nm { font-family: var(--font-mono); font-size: 10px; color: var(--fg-muted); }
+  [data-lucide] { stroke-width: 1.75; }
+</style>
+</head>
+<body>
+  <div class="label">LUCIDE · stroke 1.75 · espresso default</div>
+  <div class="row" style="color: var(--espresso);">
+    <div class="item"><i data-lucide="utensils" style="width:28px;height:28px"></i><div class="nm">utensils</div></div>
+    <div class="item"><i data-lucide="hammer" style="width:28px;height:28px"></i><div class="nm">hammer</div></div>
+    <div class="item"><i data-lucide="hard-hat" style="width:28px;height:28px"></i><div class="nm">hard-hat</div></div>
+    <div class="item"><i data-lucide="badge-check" style="width:28px;height:28px"></i><div class="nm">badge-check</div></div>
+    <div class="item"><i data-lucide="briefcase" style="width:28px;height:28px"></i><div class="nm">briefcase</div></div>
+    <div class="item"><i data-lucide="calendar" style="width:28px;height:28px"></i><div class="nm">calendar</div></div>
+    <div class="item"><i data-lucide="map-pin" style="width:28px;height:28px"></i><div class="nm">map-pin</div></div>
+    <div class="item"><i data-lucide="phone" style="width:28px;height:28px"></i><div class="nm">phone</div></div>
+    <div class="item"><i data-lucide="arrow-right" style="width:28px;height:28px"></i><div class="nm">arrow-right</div></div>
+  </div>
+  <div class="label" style="margin-top: 18px;">PIZZA-RED · accent in CTAs</div>
+  <div class="row" style="color: var(--pizza-red);">
+    <div class="item"><i data-lucide="arrow-right" style="width:24px;height:24px"></i><div class="nm">cta</div></div>
+    <div class="item"><i data-lucide="pizza" style="width:24px;height:24px"></i><div class="nm">pizza</div></div>
+    <div class="item"><i data-lucide="flame" style="width:24px;height:24px"></i><div class="nm">flame</div></div>
+  </div>
+  <div class="label" style="margin-top: 10px;">TEAL · partnership / success</div>
+  <div class="row" style="color: var(--teal-fsr);">
+    <div class="item"><i data-lucide="check-circle-2" style="width:24px;height:24px"></i><div class="nm">success</div></div>
+    <div class="item"><i data-lucide="heart-handshake" style="width:24px;height:24px"></i><div class="nm">partner</div></div>
+    <div class="item"><i data-lucide="link" style="width:24px;height:24px"></i><div class="nm">link</div></div>
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

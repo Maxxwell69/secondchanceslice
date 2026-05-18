@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cards</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--cream); font-family: var(--font-body); color: var(--fg); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card { padding: 22px; }
+  .card h3 { font-size: 20px; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: var(--fg-muted); margin: 0; line-height: 1.45; }
+  .card .pill { margin-bottom: 12px; }
+  .photo-card { padding: 0; overflow: hidden; }
+  .photo { aspect-ratio: 16 / 9; background: linear-gradient(135deg, #C44D2A 0%, #EF9F27 100%); display:flex; align-items:flex-end; padding: 14px; color: #fff; font-weight: 700; font-size: 13px; }
+  .photo-card .body { padding: 16px 18px 18px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="card card-accent">
+      <span class="pill pill-red">Culinary track</span>
+      <h3>The kitchen.</h3>
+      <p>Eight weeks at the oven, eight weeks running line. ServSafe included. You graduate with a paycheck and a job offer.</p>
+    </div>
+    <div class="card photo-card">
+      <div class="photo">[ photo placeholder · cook at oven ]</div>
+      <div class="body">
+        <span class="pill pill-teal">Cohort 14</span>
+        <h3 style="margin-top:8px;">Marcus, line cook.</h3>
+        <p>"Eight weeks in, I had a ServSafe card and a Friday-night station."</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

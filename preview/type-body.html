@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Type — Body & UI</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--paper); color: var(--fg); }
+  .spec { font-family: var(--font-mono); font-size: 11px; color: var(--fg-muted); }
+  .row { display: grid; grid-template-columns: 100px 1fr; gap: 24px; align-items: baseline; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="spec">EYEBROW<br>Inter 600 · 13 · +0.08em</div>
+    <div class="eyebrow">OUR PROGRAM</div>
+  </div>
+  <div class="row">
+    <div class="spec">LEAD<br>Inter 400 · 20</div>
+    <div class="lead">A 16-week paid training program for Philadelphians coming home.</div>
+  </div>
+  <div class="row">
+    <div class="spec">BODY<br>Inter 400 · 17</div>
+    <div>No GED needed. No interview gauntlet. Show up Tuesday at 10am — 4501 Frankford Ave.</div>
+  </div>
+  <div class="row">
+    <div class="spec">SMALL<br>Inter 400 · 14</div>
+    <div class="small" style="color: var(--fg-muted);">Cohort 14 starts March 4. Twelve seats per cohort.</div>
+  </div>
+  <div class="row">
+    <div class="spec">MONO<br>JetBrains 500 · 14</div>
+    <div class="mono">16 weeks · 4 days/wk · $15/hr</div>
+  </div>
+</body>
+</html>

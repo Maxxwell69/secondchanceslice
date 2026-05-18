@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+._*
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*.log
+
+# Node (in case anything adds it later)
+node_modules/
+.next/
+dist/
+.cache/
+
+# Vercel local cache
+.vercel/
+
+# Local env
+.env
+.env.local

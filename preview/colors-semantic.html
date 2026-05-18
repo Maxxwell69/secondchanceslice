@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Colors — Semantic</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 20px; background: var(--paper); font-family: var(--font-body); color: var(--fg); }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .tile { border-radius: var(--radius-md); padding: 16px; min-height: 110px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid transparent; }
+  .tile .name { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+  .tile .msg { font-size: 14px; font-weight: 600; }
+  .tile .hex { font-family: var(--font-mono); font-size: 11px; opacity: 0.8; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="tile" style="background: color-mix(in srgb, var(--teal-fsr) 14%, var(--paper)); color: var(--teal-fsr-press); border-color: color-mix(in srgb, var(--teal-fsr) 30%, transparent);">
+      <div class="name">Success</div>
+      <div class="msg">Application received.</div>
+      <div class="hex">#1D9E75</div>
+    </div>
+    <div class="tile" style="background: color-mix(in srgb, var(--crust-gold) 22%, var(--paper)); color: #7A4A05; border-color: color-mix(in srgb, var(--crust-gold) 40%, transparent);">
+      <div class="name">Warn</div>
+      <div class="msg">Submit by Friday.</div>
+      <div class="hex">#EF9F27</div>
+    </div>
+    <div class="tile" style="background: color-mix(in srgb, var(--pizza-red) 12%, var(--paper)); color: var(--pizza-red-press); border-color: color-mix(in srgb, var(--pizza-red) 30%, transparent);">
+      <div class="name">Danger</div>
+      <div class="msg">Missing ID upload.</div>
+      <div class="hex">#D85A30</div>
+    </div>
+    <div class="tile" style="background: color-mix(in srgb, var(--info) 12%, var(--paper)); color: var(--info); border-color: color-mix(in srgb, var(--info) 30%, transparent);">
+      <div class="name">Info</div>
+      <div class="msg">Orientation Tues 10am.</div>
+      <div class="hex">#355C8B</div>
+    </div>
+  </div>
+</body>
+</html>

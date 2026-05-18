@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brand · Logo lockup</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 18px; background: var(--paper); font-family: var(--font-body); color: var(--fg); display: grid; gap: 14px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .swatch { display: flex; align-items: center; justify-content: center; border-radius: var(--radius-lg); padding: 16px; min-height: 200px; position: relative; }
+  .swatch.paper { background: var(--paper); border: 1px solid var(--border); }
+  .swatch.cream { background: var(--cream); }
+  .swatch.dark  { background: var(--char); }
+  .swatch img { max-height: 168px; max-width: 100%; height: auto; display: block; }
+  .label { position: absolute; top: 8px; left: 10px; font-family: var(--font-mono); font-size: 10px; color: var(--fg-muted); }
+  .swatch.dark .label { color: rgba(250,238,218,0.6); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="swatch paper">
+      <span class="label">on paper</span>
+      <img src="../assets/logo/secondchanceslice-transparent.png" alt="Second Chance Slice logo">
+    </div>
+    <div class="swatch cream">
+      <span class="label">on cream</span>
+      <img src="../assets/logo/secondchanceslice-transparent.png" alt="Second Chance Slice logo">
+    </div>
+    <div class="swatch dark">
+      <span class="label">on char</span>
+      <img src="../assets/logo/secondchanceslice-transparent.png" alt="Second Chance Slice logo">
+    </div>
+  </div>
+</body>
+</html>

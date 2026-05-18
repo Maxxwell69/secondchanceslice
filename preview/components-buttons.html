@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 28px; background: var(--paper); font-family: var(--font-body); color: var(--fg); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px 14px; align-items: start; }
+  .col { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+  .label { font-family: var(--font-mono); font-size: 11px; color: var(--fg-muted); }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="col">
+      <div class="label">PRIMARY</div>
+      <button class="btn btn-primary">Apply now</button>
+      <button class="btn btn-primary" style="background: var(--crust-gold); color: var(--espresso-ink);">Apply now <span style="opacity:.6">· hover</span></button>
+      <button class="btn btn-primary" disabled>Apply now</button>
+    </div>
+    <div class="col">
+      <div class="label">SECONDARY</div>
+      <button class="btn btn-secondary">Hire a graduate</button>
+      <button class="btn btn-secondary" style="background: var(--cream);">Hire a graduate <span style="opacity:.6">· hover</span></button>
+      <button class="btn btn-secondary" disabled>Hire a graduate</button>
+    </div>
+    <div class="col">
+      <div class="label">GHOST</div>
+      <button class="btn btn-ghost">Read the program guide →</button>
+      <button class="btn btn-ghost" style="color: var(--link-press); text-decoration: underline;">Read the program guide →</button>
+      <button class="btn btn-ghost" disabled>Read the program guide →</button>
+    </div>
+  </div>
+</body>
+</html>

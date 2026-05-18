@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Colors — Brand</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 20px; background: var(--paper); font-family: var(--font-body); color: var(--fg); }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .swatch { border-radius: var(--radius-md); padding: 14px 14px 16px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; min-height: 130px; }
+  .swatch .name { font-weight: 700; font-size: 14px; line-height: 1.2; }
+  .swatch .hex { font-family: var(--font-mono); font-size: 12px; opacity: 0.85; }
+  .swatch .role { font-size: 11px; line-height: 1.3; opacity: 0.85; margin-top: 6px; }
+  .light .name, .light .hex, .light .role { color: var(--espresso-ink); }
+  .dark  .name, .dark .hex, .dark .role { color: #fff; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="swatch dark"  style="background: var(--pizza-red);">
+      <div><div class="name">Pizza Red</div><div class="role">Primary CTA · awning</div></div>
+      <div class="hex">#D85A30</div>
+    </div>
+    <div class="swatch dark"  style="background: var(--crust-gold); color: var(--espresso-ink);">
+      <div><div class="name" style="color: var(--espresso-ink)">Crust Gold</div><div class="role" style="color: var(--espresso-ink)">Secondary · CTA hover</div></div>
+      <div class="hex" style="color: var(--espresso-ink)">#EF9F27</div>
+    </div>
+    <div class="swatch light" style="background: var(--cream); border: 1px solid var(--border);">
+      <div><div class="name">Cream</div><div class="role">Alt section bg</div></div>
+      <div class="hex">#FAEEDA</div>
+    </div>
+    <div class="swatch dark"  style="background: var(--espresso);">
+      <div><div class="name">Espresso</div><div class="role">All body text</div></div>
+      <div class="hex">#4A1B0C</div>
+    </div>
+    <div class="swatch dark"  style="background: var(--teal-fsr);">
+      <div><div class="name">Teal · FSR</div><div class="role">Links · partnership accent</div></div>
+      <div class="hex">#1D9E75</div>
+    </div>
+  </div>
+</body>
+</html>

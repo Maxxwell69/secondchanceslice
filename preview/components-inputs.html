@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 28px; background: var(--paper); font-family: var(--font-body); color: var(--fg); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; max-width: 620px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: 13px; font-weight: 600; }
+  .help { font-size: 12px; color: var(--fg-muted); }
+  .err { font-size: 12px; color: var(--pizza-red-press); }
+  .focused { border-color: var(--pizza-red) !important; box-shadow: var(--shadow-focus); }
+  .error { border-color: var(--pizza-red) !important; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="field">
+      <label>Full name</label>
+      <input class="input" value="Marcus Williams">
+      <div class="help">As it appears on your ID.</div>
+    </div>
+    <div class="field">
+      <label>Phone</label>
+      <input class="input focused" value="(215) ">
+      <div class="help">We'll text Tuesday's address.</div>
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input class="input error" value="not-an-email">
+      <div class="err">Use the email you check most.</div>
+    </div>
+    <div class="field">
+      <label>Track</label>
+      <select class="select"><option>Culinary (pizza kitchen)</option><option>Construction</option></select>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,340 @@
+/* ============================================================
+   Second Chance Slice — Design Tokens
+   colors_and_type.css
+   ============================================================ */
+
+/* --- Web fonts (Google Fonts substitutes — flagged in README) --- */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ------------ Brand colors ------------ */
+  --pizza-red:   #D85A30;
+  --pizza-red-press: #B94823;
+  --crust-gold:  #EF9F27;
+  --crust-gold-press: #D58711;
+  --cream:       #FAEEDA;
+  --cream-deep:  #F1DFBF;          /* hover state for cream surfaces */
+  --espresso:    #4A1B0C;
+  --espresso-ink:#2E0F06;          /* hover for text */
+  --teal-fsr:    #1D9E75;
+  --teal-fsr-press: #137A5A;
+  --paper:       #FFFFFF;
+  --char:        #1A0E08;          /* deep brown — footer only */
+
+  /* ------------ Semantic surfaces / ink ------------ */
+  --bg:          var(--paper);
+  --bg-alt:      var(--cream);
+  --bg-deep:     var(--char);
+  --fg:          var(--espresso);
+  --fg-muted:    color-mix(in srgb, var(--espresso) 64%, var(--cream));
+  --fg-faint:    color-mix(in srgb, var(--espresso) 38%, var(--cream));
+  --fg-on-red:   #FFFFFF;
+  --fg-on-char:  var(--cream);
+  --link:        var(--teal-fsr);
+  --link-press:  var(--teal-fsr-press);
+
+  /* ------------ Borders ------------ */
+  --border:        color-mix(in srgb, var(--espresso) 12%, transparent);
+  --border-strong: color-mix(in srgb, var(--espresso) 28%, transparent);
+  --border-focus:  var(--pizza-red);
+
+  /* ------------ Status ------------ */
+  --success: var(--teal-fsr);
+  --warn:    var(--crust-gold);
+  --danger:  var(--pizza-red);
+  --info:    #355C8B; /* used only for system / legal notice */
+
+  /* ------------ Typography families ------------ */
+  /* Display = Oswald (bold condensed, echoes the logo wordmark). */
+  /* Body    = Inter (workhorse pair). */
+  --font-display: 'Oswald', 'Barlow Condensed', 'Arial Narrow', ui-sans-serif, system-ui, sans-serif;
+  --font-body:    'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif:   'Newsreader', ui-serif, Georgia, 'Times New Roman', serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ------------ Type scale (base 16) ------------ */
+  --fs-eyebrow: 13px;
+  --fs-small:   14px;
+  --fs-body:    17px;
+  --fs-lead:    20px;
+  --fs-h4:      22px;
+  --fs-h3:      28px;
+  --fs-h2:      36px;
+  --fs-h1:      48px;
+  --fs-display: 64px;
+  --fs-mega:    88px;
+
+  /* Line-heights */
+  --lh-tight:  1.05;
+  --lh-snug:   1.15;
+  --lh-normal: 1.45;
+  --lh-loose:  1.6;
+
+  /* Tracking */
+  --tracking-display: -0.015em;
+  --tracking-tight:   -0.01em;
+  --tracking-eyebrow: 0.08em;
+
+  /* ------------ Spacing (8pt soft grid) ------------ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ------------ Radii ------------ */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 999px;
+
+  /* ------------ Shadows (espresso-tinted, never gray) ------------ */
+  --shadow-sm:    0 1px 2px rgba(74,27,12,0.06);
+  --shadow-md:    0 4px 14px rgba(74,27,12,0.08);
+  --shadow-lg:    0 12px 40px rgba(74,27,12,0.12);
+  --shadow-xl:    0 24px 64px rgba(74,27,12,0.16);
+  --shadow-press: inset 0 1px 0 rgba(74,27,12,0.10);
+  --shadow-focus: 0 0 0 3px color-mix(in srgb, var(--pizza-red) 30%, transparent);
+
+  /* ------------ Motion ------------ */
+  --ease-out:    cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast:    120ms;
+  --dur-base:    180ms;
+  --dur-slow:    320ms;
+
+  /* ------------ Layout ------------ */
+  --max-content: 1200px;
+  --gutter-d:    80px;
+  --gutter-m:    24px;
+  --header-h:    72px;
+}
+
+/* ============================================================
+   Semantic element styles — drop-in if you want them
+   ============================================================ */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-loose);
+  font-weight: 400;
+}
+
+/* Headlines */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: var(--font-display);
+  color: var(--fg);
+  margin: 0;
+  text-wrap: balance;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-display);
+  line-height: 0.95;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1, .h1 {
+  font-weight: 700;
+  font-size: var(--fs-h1);
+  line-height: 0.98;
+}
+
+h2, .h2 {
+  font-weight: 700;
+  font-size: var(--fs-h2);
+  line-height: 1.02;
+}
+
+h3, .h3 {
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  line-height: 1.08;
+}
+
+h4, .h4 {
+  font-weight: 600;
+  font-size: var(--fs-h4);
+  line-height: 1.15;
+}
+
+/* Body / utility */
+.lead {
+  font-size: var(--fs-lead);
+  line-height: var(--lh-loose);
+  color: var(--fg);
+}
+
+p { margin: 0 0 var(--space-4); text-wrap: pretty; }
+
+small, .small { font-size: var(--fs-small); }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-eyebrow);
+  color: var(--fg-muted);
+  line-height: 1;
+}
+
+.quote, blockquote {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  line-height: 1.4;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--fg);
+}
+
+code, kbd, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.94em;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-base) var(--ease-out), text-decoration-thickness var(--dur-base) var(--ease-out);
+}
+a:hover {
+  color: var(--link-press);
+  text-decoration-thickness: 2px;
+}
+
+::selection { background: var(--crust-gold); color: var(--espresso-ink); }
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--dur-base) var(--ease-out),
+              color var(--dur-base) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+  user-select: none;
+}
+.btn:active { transform: scale(0.97); }
+.btn:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+
+.btn-primary {
+  background: var(--pizza-red);
+  color: var(--fg-on-red);
+}
+.btn-primary:hover { background: var(--crust-gold); color: var(--espresso-ink); }
+.btn-primary:active { background: var(--pizza-red-press); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--espresso);
+}
+.btn-secondary:hover { background: var(--cream); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--link);
+  padding: 10px 12px;
+}
+.btn-ghost:hover { color: var(--link-press); text-decoration: underline; }
+
+.btn[disabled], .btn[aria-disabled="true"] {
+  background: var(--cream);
+  color: color-mix(in srgb, var(--espresso) 40%, transparent);
+  border-color: transparent;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ============================================================
+   Inputs
+   ============================================================ */
+.input, .textarea, .select {
+  display: block;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--fg);
+  background: var(--paper);
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  transition: border-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+.input::placeholder { color: var(--fg-faint); }
+.input:focus, .textarea:focus, .select:focus {
+  outline: none;
+  border-color: var(--pizza-red);
+  box-shadow: var(--shadow-focus);
+}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+.card {
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-6);
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.card-accent { border-top: 4px solid var(--pizza-red); }
+
+/* ============================================================
+   Eyebrow / pill
+   ============================================================ */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  background: var(--cream);
+  color: var(--fg);
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+.pill-teal { background: color-mix(in srgb, var(--teal-fsr) 14%, var(--paper)); color: var(--teal-fsr-press); }
+.pill-red  { background: color-mix(in srgb, var(--pizza-red) 14%, var(--paper)); color: var(--pizza-red-press); }
+.pill-gold { background: color-mix(in srgb, var(--crust-gold) 22%, var(--paper)); color: #7A4A05; }

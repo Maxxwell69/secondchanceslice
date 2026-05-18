@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Type — Display</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--paper); color: var(--fg); }
+  .spec { font-family: var(--font-mono); font-size: 11px; color: var(--fg-muted); letter-spacing: 0; text-transform: none; }
+  .row { display: grid; grid-template-columns: 100px 1fr; gap: 24px; align-items: baseline; margin-bottom: 12px; }
+  .row .spec { padding-top: 8px; }
+  .display { font-size: 56px; }
+  .h1 { font-size: 38px; }
+  .h2 { font-size: 28px; }
+  .accent { color: var(--pizza-red); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="spec">DISPLAY<br>Oswald 700 · 56</div>
+    <div class="display">PIZZA PAYS<br>THE BILLS.</div>
+  </div>
+  <div class="row">
+    <div class="spec">H1<br>Oswald 700 · 38</div>
+    <div class="h1">THE PROGRAM <span class="accent">PAYS IT FORWARD.</span></div>
+  </div>
+  <div class="row">
+    <div class="spec">H2<br>Oswald 700 · 28</div>
+    <div class="h2">SIXTEEN WEEKS. TWO CERTS.</div>
+  </div>
+</body>
+</html>
