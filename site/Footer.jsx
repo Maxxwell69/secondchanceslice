@@ -12,8 +12,8 @@ function Footer() {
             </span>
           </a>
           <address className="scs-footer-addr">
-            4501 Frankford Ave<br/>
-            Philadelphia, PA 19124<br/>
+            2400 Kensington Ave<br/>
+            Philadelphia, PA 19125<br/>
             <a href="tel:2155551234">(215) 555-1234</a>
           </address>
           <div className="scs-footer-parent">
@@ -26,7 +26,6 @@ function Footer() {
           <a href="#">Apply</a>
           <a href="#">How it works</a>
           <a href="#">Culinary track</a>
-          <a href="#">Construction track</a>
         </div>
         <div>
           <div className="scs-footer-h">For partners</div>
