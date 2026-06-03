@@ -19,7 +19,6 @@ function Header({ onApply, onHire, onOrder }) {
           <a href="#hire" onClick={(e)=>{e.preventDefault(); onHire();}}>Hire a grad</a>
           <a href="#order" onClick={(e)=>{e.preventDefault(); onOrder();}}>Order a pie</a>
         </nav>
-        <button className="btn btn-primary scs-apply" onClick={onApply}>Apply now</button>
       </div>
     </header>
   );
