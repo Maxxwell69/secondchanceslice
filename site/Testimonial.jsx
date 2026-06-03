@@ -5,7 +5,7 @@ function Testimonial() {
       <div className="scs-container scs-quote-grid">
         <div className="scs-quote-photo">
           <div className="scs-photo scs-photo-portrait">
-            <span className="scs-photo-label">portrait · Marcus, in the kitchen, looking at camera</span>
+            <img src="assets/marcus-portrait.png" alt="Marcus Williams, Cohort 9 graduate, in the kitchen" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'top',display:'block'}} />
           </div>
         </div>
         <div className="scs-quote-body">

@@ -19,7 +19,7 @@ function Hero({ onApply }) {
         </div>
         <div className="scs-hero-photo">
           <div className="scs-photo scs-photo-hero">
-            <span className="scs-photo-label">photo · cook pulling a pizza from the oven, golden hour</span>
+            <img src="assets/hero-cook.png" alt="Cook pulling a pizza from a wood-fired oven at golden hour" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
           </div>
         </div>
       </div>
